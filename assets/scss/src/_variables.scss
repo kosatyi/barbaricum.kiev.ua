@@ -1,0 +1,38 @@
+@import '../modules/bootstrap/functions';
+
+$grid-gutter-width:2.5rem;
+$grid-gutter:$grid-gutter-width;
+$grid-space:$grid-gutter/2;
+$grid-space-sm:$grid-gutter/4;
+
+$font-family-base:'Roboto', sans-serif;
+
+$font-weight-light:300;
+$font-weight-normal:300;
+$font-weight-bold:500;
+
+$font-weight-base:300;
+$headings-font-weight:400;
+
+$border-radius:0;
+$border-radius-lg:0;
+$border-radius-sm:0;
+
+$container-max-widths:(xl: 1140px);
+
+$btn-focus-width: 0;
+
+$enable-shadows:true;
+$enable-caret:true;
+
+$theme-colors: (
+  "primary": #0f1212
+);
+
+$link-color:theme-color("primary");
+$link-hover-color: theme-color("primary");
+
+$header-height:3.5rem;
+$toolbar-height:2.5rem;
+
+$tr:transparent;

@@ -1,0 +1,10 @@
+@import '../modules/roboto/mixins';
+
+$roboto-font-path:'../fonts';
+
+@include roboto-font('roboto', 'Roboto', 'Light', 300, normal);
+@include roboto-font('roboto', 'Roboto', 'LightItalic', 300, italic);
+@include roboto-font('roboto', 'Roboto', 'Regular', 400, normal);
+@include roboto-font('roboto', 'Roboto', 'RegularItalic', 400, italic);
+@include roboto-font('roboto', 'Roboto', 'Medium', 500, normal);
+@include roboto-font('roboto', 'Roboto', 'MediumItalic', 500, italic);

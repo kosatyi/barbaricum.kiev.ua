@@ -1,1 +1,0 @@
-# barbaricum.kiev.ua

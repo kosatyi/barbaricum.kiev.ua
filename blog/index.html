@@ -1,0 +1,17 @@
+---
+title: Blog
+headline: Blog
+tagline: Interesting stories from web and social media
+description:  Interesting stories from web and social media
+layout: default
+---
+<div class="section">
+    <div class="container">
+        <div class="row">
+            {% for post in paginator.posts %}
+                {% include blog-post.html %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% include paginator.html %}

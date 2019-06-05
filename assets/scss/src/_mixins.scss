@@ -1,0 +1,116 @@
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+  @return $randomNum;
+}
+
+@mixin noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin sticky($type:top,$value:0,$index:999999) {
+  position:-webkit-sticky;
+  position:sticky;
+  #{$type}:$value;
+  z-index:$index;
+  @media print {
+    position: relative;
+  }
+}
+
+
+@mixin media($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content
+  }
+}
+
+@mixin mobile {
+  @include media(580px){
+    @content
+  }
+}
+
+@mixin tablet {
+  @include media(1024px){
+    @content
+  }
+}
+
+@mixin hover{
+  &:hover{
+    @content
+  }
+}
+
+@mixin hover-focus {
+  &:hover,&:focus{
+    @content
+  }
+}
+
+@mixin hover-focus-active {
+  &:hover,&:focus,&:active{
+    @content
+  }
+}
+
+@mixin border-box{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin no-scrollbar{
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin clearfix {
+  &:after,&:before{
+    content:'';
+    clear: both;
+    display:table;
+  }
+}
+
+@mixin display-flex {
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+}
+
+@mixin flex-direction($type: row){
+  -webkit-flex-direction: $type;
+  -moz-flex-direction: $type;
+  -ms-flex-direction: $type;
+  flex-direction: $type;
+}
+
+@mixin flex($value:1){
+  -moz-box-flex: $value;
+  -webkit-flex: $value;
+  -moz-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}

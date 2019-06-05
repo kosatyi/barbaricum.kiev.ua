@@ -1,0 +1,20 @@
+{
+  "name": "barbaricum.kiev.ua",
+  "version": "0.0.1",
+  "dependencies": {
+    "animatewithsass": "^3.2.1",
+    "bootstrap": "^4.1.1",
+    "@fortawesome/fontawesome-pro": "^5.8.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9",
+    "roboto-fontface": "^0.8.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-run": "^1.7.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11"
+  }
+}

@@ -1,0 +1,61 @@
+html{
+  scroll-behavior: smooth;
+}
+html, body {
+  background-color: #fff;
+}
+strong, b, .text-bold {
+  font-weight: $font-weight-bold;
+}
+
+.width-full{
+  width:100%;
+}
+.relative{
+  position:relative;
+}
+.d-flex{
+  @include display-flex;
+}
+.d-row{
+  @include flex-direction(row);
+}
+.d-column{
+  @include flex-direction(column);
+}
+.flex-1{
+  @include flex(1);
+}
+.d-cover{
+  @include display-flex;
+  @include flex-direction(column);
+  @include flex(1);
+}
+
+.flex-row{
+  @include display-flex;
+  @include flex-direction(row);
+}
+
+.flex-column{
+  @include display-flex;
+  @include flex-direction(column);
+}
+
+.a-centered{
+  align-items: center;
+  justify-content: center;
+}
+
+.text-light{
+  color:#fff;
+  fill:#fff;
+}
+
+.svg-icon {
+  svg{
+    max-width:none;
+    max-height:150px;
+    display:block;
+  }
+}

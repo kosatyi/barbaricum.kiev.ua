@@ -1,0 +1,65 @@
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+
+port: 4444
+
+exclude:
+  - .idea
+  - node_modules
+  - Gemfile.lock
+  - Gemfile
+
+baseurl:
+url:  https://kosatyi.com
+
+paginate: 10
+paginate_path: /blog/page-:num/
+
+#analytics: UA-25258708-4
+#sharethis: property=59985e446692a7001120ec59&product=inline-share-buttons
+
+title: Barbaricum
+
+author:
+  name: Stepan Kosatyi
+  url: https://kosatyi.com/
+  twitter: kosatyi
+  image:
+    path:  /assets/images/profile.jpg
+    height: 512
+    width: 512
+
+social:
+  name: Stepan Kosatyi
+  links:
+    - https://plus.google.com/+StepanKosatyi
+    - https://twitter.com/kosatyi
+    - https://facebook.com/kosatyi
+    - https://www.pinterest.com/kosatyi/
+    - https://www.linkedin.com/in/stepankosatyi/
+    - https://github.com/kosatyi
+  profiles:
+    facebook: https://facebook.com/kosatyi
+    twitter: https://twitter.com/kosatyi
+    linkedin: https://www.linkedin.com/in/stepankosatyi/
+    google: https://plus.google.com/+StepanKosatyi
+    pinterest: https://www.pinterest.com/kosatyi/
+    github: https://github.com/kosatyi
+
+
+defaults:
+  -
+    scope:
+      path: ''
+    values:
+      layout: 'default'
+  -
+    scope:
+        path: ''
+        type: 'posts'
+    values:
+        layout: 'post'
+        permalink: '/blog/:year/:month/:day/:title.html'
