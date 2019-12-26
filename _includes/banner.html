@@ -1,0 +1,17 @@
+<section id="banner" class="page-section page-section-header">
+    <div class="page-layout d-cover">
+        <div class="row d-cover">
+            <div class="col-12 d-cover a-centered">
+                <div class="width-full text-light">
+                    {% if page.title %}
+                        <h1>{{ page.title }}</h1>
+                    {% endif %}
+                    {% if page.description %}
+                        <h5>{{ page.description }}</h5>
+                    {% endif %}
+                    {% include breadcrumbs.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

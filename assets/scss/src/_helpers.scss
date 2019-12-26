@@ -52,10 +52,41 @@ strong, b, .text-bold {
   fill:#fff;
 }
 
+.bold{
+  font-weight:$font-weight-bold;
+}
+
 .svg-icon {
   svg{
     max-width:none;
-    max-height:150px;
+    max-height:100px;
     display:block;
   }
+}
+
+.sticky-header{
+  position:sticky;
+  z-index:50;
+  top:$header-height;
+}
+
+.sticky-header-margin{
+  position:sticky;
+  z-index:50;
+  top:$header-height + $grid-gutter-width;
+}
+
+.t-o-c{
+  @extend .col-md-auto;
+  font-size:0.875rem;
+  margin-right:$grid-space;
+  margin-top:$grid-gutter-width;
+  max-width:300px;
+  background-color:#efefef;
+  padding:$grid-space;
+  height:calc(100vh - #{$header-height});
+  overflow:auto;
+  position:sticky;
+  top:$header-height;
+  z-index:50;
 }

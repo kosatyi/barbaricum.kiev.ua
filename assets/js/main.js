@@ -124,8 +124,8 @@
             sjt.on(sjt.window,'hashchange',this.scrollToCurrent.bind(this));
             sjt.on(sjt.document.body,'click',this.delegateAnchors.bind(this));
         },
-        getFixedOffset: function () {
-            return this.OFFSET_HEIGHT_PX;
+        getFixedOffset: function (el) {
+            return this.OFFSET_HEIGHT_PX;// + (16 * 1.25);
         },
         scrollIfAnchor: function (href, pushToHistory) {
             var match, rect, anchorOffset;
@@ -135,12 +135,9 @@
             match = sjt.document.getElementById(href.slice(1));
             if (match) {
                 rect = match.getBoundingClientRect();
-                anchorOffset = sjt.window.pageYOffset + rect.top - this.getFixedOffset();
-
+                anchorOffset = sjt.window.pageYOffset + rect.top - this.getFixedOffset(match);
+                console.log(anchorOffset);
                 sjt.window.scrollTo(sjt.window.pageXOffset, anchorOffset);
-
-
-
                 if (sjt.historySupport && pushToHistory) {
                     sjt.history.pushState({}, document.title, location.pathname + href);
                 }
@@ -313,6 +310,7 @@
 
 (function () {
     function matchLinks() {
+        console.log(location.href);
         var href = location.href, expr;
         sjt.findAll('[href],[data-rel]').filter(function (el) {
             el.classList.remove('active');
@@ -324,6 +322,7 @@
     }
     matchLinks();
     sjt.on(window,'historychange',matchLinks);
+    sjt.on(window,'hashchange',matchLinks);
 })();
 
 

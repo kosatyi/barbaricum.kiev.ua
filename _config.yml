@@ -49,6 +49,34 @@ social:
     pinterest: https://www.pinterest.com/kosatyi/
     github: https://github.com/kosatyi
 
+collections_dir: _collections
+
+collections:
+  laboratory:
+    output: true
+    permalink: '/laboratory/:categories/:title.html'
+  archaeology:
+    output: true
+    permalink: '/archaeology/:categories/:title.html'
+  history:
+    output: true
+    permalink: '/history/:categories/:title.html'
+  articles:
+    output: true
+    permalink: '/archaeology/articles/:title.html'
+  fonds:
+    output: true
+    permalink: '/archaeology/fonds/:title.html'
+  legislation:
+    output: true
+    permalink: '/archaeology/legislation/:title.html'
+    relative_directory: '/_collections/archaeology/legislation/'
+  reports:
+    output: true
+    permalink: '/archaeology/reports/:title.html'
+  posts:
+    output: true
+    permalink: '/blog/:year/:month/:day/:title.html'
 
 defaults:
   -
@@ -56,10 +84,47 @@ defaults:
       path: ''
     values:
       layout: 'default'
-  -
-    scope:
-        path: ''
-        type: 'posts'
+
+  - scope:
+      path: ""
+      type: "archaeology"
     values:
-        layout: 'post'
-        permalink: '/blog/:year/:month/:day/:title.html'
+      layout: "article"
+
+  - scope:
+      path: ""
+      type: "history"
+    values:
+      layout: "article"
+
+  - scope:
+      path: ""
+      type: "laboratory"
+    values:
+      layout: "article"
+
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "fonds"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "reports"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "legislation"
+    values:
+      layout: "doc"

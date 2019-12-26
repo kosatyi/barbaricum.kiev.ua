@@ -1,0 +1,15 @@
+---
+title: Законодавство
+---
+<section class="page-section">
+    <div class="page-layout">
+        <div class="row">
+            <div class="col-12">
+                {% for item in site.legislation %}
+                    <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+                    <p>{{ item.description }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

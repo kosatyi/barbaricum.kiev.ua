@@ -1,26 +1,23 @@
 ---
 title: Лабораторія
-permalink: /laboratory/
 ---
-
-<section id="welcome" class="page-section page-section-header">
-    <div class="page-layout d-cover">
-        <div class="row d-cover">
-            <div class="col-12 d-cover a-centered">
-                <div class="width-full text-light">
-                    <h1>Навчальна науково-дослідна лабораторія археологічних досліджень</h1>
-                    <h4>Інституту історичної освіти Національного педагогічного університету ім. М. П. Драгоманова.</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="page-section">
     <div class="page-layout">
         <div class="row">
-            <div class="col-12">
-                asjdjflkajsdlkfjalskdjflk
+            <div class="col">
+                <h2>Articles</h2>
+                {% for item in site.articles %}
+                <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+                <p>{{ item.description }}</p>
+                {% endfor %}
+                <h2>Legislation</h2>
+                <h2>Collections</h2>
+                {% for item in site.collections %}
+                <div style="height:200px;">
+                    {{ item.label }}
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

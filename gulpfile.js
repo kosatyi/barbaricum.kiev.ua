@@ -28,7 +28,7 @@ gulp.task('scss:animate',function(){
         .pipe(gulp.dest('assets/scss/modules/animate'));
 });
 
-gulp.task('scss:import', ['scss:animate','scss:bootstrap','scss:fontawesome']);
+gulp.task('scss:import', gulp.series(['scss:animate','scss:bootstrap','scss:fontawesome']));
 
 gulp.task('scss:compile', function(){
     return gulp.src(['assets/scss/*.scss'])
@@ -38,13 +38,10 @@ gulp.task('scss:compile', function(){
         .pipe(gulp.dest("assets/css"))
 });
 
-gulp.task('scss', ['scss:import','scss:compile']);
+gulp.task('scss', gulp.series(['scss:import','scss:compile']));
 
 gulp.task('watcher', function() {
-    gulp.watch(['assets/scss/**/*.scss'], ['scss:compile']);
+    gulp.watch(['assets/scss/**/*.scss'], gulp.series(['scss:compile']));
 });
 
-gulp.task('default', [
-    'scss' ,
-    'fonts'
-]);
+gulp.task('default', gulp.series(['scss', 'fonts']));
