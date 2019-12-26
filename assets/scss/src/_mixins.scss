@@ -105,6 +105,14 @@
   flex-direction: $type;
 }
 
+@mixin flex-center(){
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
 @mixin flex($value:1){
   -moz-box-flex: $value;
   -webkit-flex: $value;

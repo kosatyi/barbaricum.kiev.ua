@@ -2,7 +2,7 @@
     <div class="page-layout d-flex pb-0">
         <div class="page-toolbar-wrapper">
             <div class="page-toolbar-item">
-                <a href="/" target="_blank" class="text-white">Головна</a>
+                <a href="/" class="text-white">Головна</a>
             </div>
             <div class="page-toolbar-item">
                 <a href="https://uazmi.org/" target="_blank" class="text-white">Новини</a>
@@ -10,60 +10,56 @@
             <div class="page-toolbar-item">
                 <a href="https://npu.edu.ua/" target="_blank" class="text-white">Освіта</a>
             </div>
-            <div class="page-toolbar-item">
-                <a href="https://npu.edu.ua/" target="_blank" class="text-white">Блог</a>
-            </div>
         </div>
         <div class="m-auto"></div>
-        <div class="page-toolbar-wrapper">
+        <div class="page-toolbar-wrapper d-none d-sm-flex">
             <div class="page-toolbar-item">
-                <a href="" class="text-success">Стати автором</a>
+                <a href="" class="text-white">Стати автором</a>
             </div>
             <div class="page-toolbar-item">
-                <a href="" class="text-danger">Допомогти проекту</a>
+                <a href="" class="text-white">Допомогти проекту</a>
             </div>
         </div>
     </div>
 </header>
-
 <header id="header" class="page-header sticky-top">
     <div class="page-layout d-flex pb-0">
-        <a href="/" class="page-logo">
-            {% include icon/logo-text.svg %}
-        </a>
-        <nav class="page-nav">
-            <div class="page-nav-item">
-                <a href="/archaeology/" class="page-nav-link"><span>Археологія</span></a>
-                <div class="page-nav-menu">
-                    <a href="/archaeology/periods/"
-                       class="page-nav-menu-link"><span>Археологічна періодизація</span></a>
-                    <a href="/archaeology/cultures/" class="page-nav-menu-link"><span>Археологічні культури</span></a>
-                    <a href="/archaeology/legislation/" class="page-nav-menu-link"><span>Законодавство</span></a>
-                    <a href="/archaeology/library/" class="page-nav-menu-link"><span>Бібліотека</span></a>
-                    <a href="/archaeology/articles/" class="page-nav-menu-link"><span>Публікації</span></a>
+        <a href="/" class="page-logo">{% include icon/logo-text.svg %}</a>
+        <div class="page-nav-wrapper">
+            <a href="#" class="page-nav-toggle">{% include icon/bars.svg %}</a>
+            <nav class="page-nav-list">
+                <div class="page-nav-item">
+                    <a href="/archaeology/" class="page-nav-link"><span>Археологія</span></a>
+                    <div class="page-nav-menu">
+                        <a href="/archaeology/periods/" class="page-nav-menu-link"><span>Археологічна періодизація</span></a>
+                        <a href="/archaeology/cultures/" class="page-nav-menu-link"><span>Археологічні культури</span></a>
+                        <a href="/archaeology/legislation/" class="page-nav-menu-link"><span>Законодавство</span></a>
+                        <a href="/archaeology/library/" class="page-nav-menu-link"><span>Бібліотека</span></a>
+                        <a href="/archaeology/articles/" class="page-nav-menu-link"><span>Публікації</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="page-nav-item">
-                <a href="/history/" class="page-nav-link"><span>Історія</span></a>
-                <div class="page-nav-menu">
-                    <a href="/history/" class="page-nav-menu-link"><span>Історія лабораторії</span></a>
-                    <a href="/history/" class="page-nav-menu-link"><span>Склад лабораторії</span></a>
-                    <a href="/history/" class="page-nav-menu-link"><span>Звіти експедицій</span></a>
-                    <a href="/history/" class="page-nav-menu-link"><span>Фонди лабораторії</span></a>
+                <div class="page-nav-item">
+                    <a href="/history/" class="page-nav-link"><span>Історія</span></a>
+                    <div class="page-nav-menu">
+                        <a href="/history/" class="page-nav-menu-link"><span>Історія лабораторії</span></a>
+                        <a href="/history/" class="page-nav-menu-link"><span>Склад лабораторії</span></a>
+                        <a href="/history/" class="page-nav-menu-link"><span>Звіти експедицій</span></a>
+                        <a href="/history/" class="page-nav-menu-link"><span>Фонди лабораторії</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="page-nav-item">
-                <a href="/laboratory/" class="page-nav-link"><span>Лабораторія</span></a>
-                <div class="page-nav-menu">
-                    <a href="/laboratory/history/" class="page-nav-menu-link"><span>Історія лабораторії</span></a>
-                    <a href="/laboratory/person/" class="page-nav-menu-link"><span>Склад лабораторії</span></a>
-                    <a href="/laboratory/reports/" class="page-nav-menu-link"><span>Звіти експедицій</span></a>
-                    <a href="/laboratory/fonds/" class="page-nav-menu-link"><span>Фонди лабораторії</span></a>
+                <div class="page-nav-item">
+                    <a href="/laboratory/" class="page-nav-link"><span>Лабораторія</span></a>
+                    <div class="page-nav-menu">
+                        <a href="/laboratory/history/" class="page-nav-menu-link"><span>Історія лабораторії</span></a>
+                        <a href="/laboratory/person/" class="page-nav-menu-link"><span>Склад лабораторії</span></a>
+                        <a href="/laboratory/reports/" class="page-nav-menu-link"><span>Звіти експедицій</span></a>
+                        <a href="/laboratory/fonds/" class="page-nav-menu-link"><span>Фонди лабораторії</span></a>
+                    </div>
                 </div>
-            </div>
-            <div class="page-nav-item">
-                <a href="/contacts/" class="page-nav-link"><span>Контакти</span></a>
-            </div>
-        </nav>
+                <div class="page-nav-item">
+                    <a href="/contacts/" class="page-nav-link"><span>Контакти</span></a>
+                </div>
+            </nav>
+        </div>
     </div>
 </header>

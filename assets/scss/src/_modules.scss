@@ -13,6 +13,7 @@
 @import "../modules/bootstrap/forms";
 @import "../modules/bootstrap/buttons";
 @import "../modules/bootstrap/transitions";
+
 //@import "../modules/bootstrap/dropdown";
 //@import "../modules/bootstrap/button-group";
 //@import "../modules/bootstrap/input-group";
@@ -38,10 +39,9 @@
 
 $fa-font-path:"../fonts";
 
-@import '../modules/fontawesome/fontawesome';
-@import '../modules/fontawesome/regular';
-@import '../modules/fontawesome/light';
-@import '../modules/fontawesome/solid';
+//@import '../modules/fontawesome/fontawesome';
+//@import '../modules/fontawesome/regular';
+//@import '../modules/fontawesome/light';
+//@import '../modules/fontawesome/solid';
 
 @import '../modules/roboto/mixins';
-
