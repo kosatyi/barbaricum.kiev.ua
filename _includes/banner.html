@@ -3,6 +3,14 @@
         <div class="row d-cover">
             <div class="col-12 d-cover a-centered">
                 <div class="width-full text-light">
+                    {% if page.legislation %}
+                        <h5>
+                            <a href="{{ page.legislation.link }}" class="text-white">
+                                {{ page.legislation.organization }}
+                            </a>
+                        </h5>
+                        <p>№ {{ page.legislation.number }} &bull; {{ page.legislation.date }}</p>
+                    {% endif %}
                     {% if page.title %}
                         <h1>{{ page.title }}</h1>
                     {% endif %}

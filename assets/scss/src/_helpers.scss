@@ -1,83 +1,120 @@
-html{
+html {
   scroll-behavior: smooth;
 }
+
 html, body {
   background-color: #fff;
 }
+
 strong, b, .text-bold {
   font-weight: $font-weight-bold;
 }
 
-.width-full{
-  width:100%;
+.width-full {
+  width: 100%;
 }
-.relative{
-  position:relative;
+
+.text-white{
+  fill:#fff;
 }
-.d-flex{
+
+.relative {
+  position: relative;
+}
+
+
+.d-flex {
   @include display-flex;
 }
-.d-row{
+
+.d-row {
   @include flex-direction(row);
 }
-.d-column{
+
+.d-column {
   @include flex-direction(column);
 }
-.flex-1{
+
+.flex-1 {
   @include flex(1);
 }
-.d-cover{
+
+.d-cover {
   @include display-flex;
   @include flex-direction(column);
   @include flex(1);
 }
-.flex-row{
+
+.flex-row {
   @include display-flex;
   @include flex-direction(row);
 }
-.flex-column{
+
+.flex-column {
   @include display-flex;
   @include flex-direction(column);
 }
-.a-centered{
+
+.a-centered {
   align-items: center;
   justify-content: center;
 }
-.text-light{
-  color:#fff;
-  fill:#fff;
+
+.text-light {
+  color: #fff;
+  fill: #fff;
 }
-.bold{
-  font-weight:$font-weight-bold;
+
+.bold {
+  font-weight: $font-weight-bold;
 }
+
 .svg-icon {
-  svg{
-    max-width:none;
-    max-height:100px;
-    display:block;
+  svg {
+    max-width: none;
+    max-height: 100px;
+    display: block;
   }
 }
-.sticky-header{
-  position:sticky;
-  z-index:50;
-  top:$header-height;
+
+.sticky-header {
+  position: sticky;
+  z-index: 50;
+  top: $header-height;
 }
-.sticky-header-margin{
-  position:sticky;
-  z-index:50;
-  top:$header-height + $grid-gutter-width;
+
+.sticky-header-margin {
+  position: sticky;
+  z-index: 50;
+  top: $header-height + $grid-gutter-width;
 }
-.t-o-c{
-  @extend .col-md-auto;
-  font-size:0.875rem;
-  margin-right:$grid-space;
-  margin-top:$grid-gutter-width;
-  max-width:300px;
-  background-color:#efefef;
-  padding:$grid-space;
-  height:calc(100vh - #{$header-height});
-  overflow:auto;
-  position:sticky;
-  top:$header-height;
-  z-index:50;
+
+.row {
+  .col-contents {
+    @extend .col-md-auto;
+    font-size: 0.875rem;
+    margin-right: $grid-space;
+    margin-top: $grid-gutter-width;
+    max-width: 300px;
+    background-color: #efefef;
+    padding: $grid-space !important;
+    height: calc(100vh - #{$header-height});
+    overflow: auto;
+    position: sticky;
+    top: $header-height;
+    z-index: 50;
+  }
+  .col-text {
+
+  }
+}
+
+.svg-inline-icon{
+  display:inline-block;
+  font-size:0;
+  svg{
+    height:1rem * $line-height-base;
+    width:auto;
+    fill:inherit;
+  }
 }

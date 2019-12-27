@@ -6,7 +6,10 @@ title: Звіти Експедицій
     <div class="page-layout">
         <div class="row">
             <div class="col-12">
-
+                {% for item in site.reports %}
+                <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+                <p>{{ item.description }}</p>
+                {% endfor %}
             </div>
         </div>
     </div>

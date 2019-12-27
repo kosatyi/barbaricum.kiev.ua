@@ -12,7 +12,8 @@ exclude:
   - Gemfile.lock
   - Gemfile
 
-baseurl:
+
+baseurl: ''
 url:  https://kosatyi.com
 
 paginate: 10
@@ -70,7 +71,7 @@ collections:
   legislation:
     output: true
     permalink: '/archaeology/legislation/:title.html'
-    relative_directory: '/_collections/archaeology/legislation/'
+    layout: "doc"
   reports:
     output: true
     permalink: '/archaeology/reports/:title.html'
@@ -84,25 +85,21 @@ defaults:
       path: ''
     values:
       layout: 'default'
-
   - scope:
       path: ""
       type: "archaeology"
     values:
       layout: "article"
-
   - scope:
       path: ""
       type: "history"
     values:
       layout: "article"
-
   - scope:
       path: ""
       type: "laboratory"
     values:
       layout: "article"
-
   - scope:
       path: ""
       type: "posts"

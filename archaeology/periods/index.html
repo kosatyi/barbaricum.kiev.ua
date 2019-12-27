@@ -1,5 +1,6 @@
 ---
-title: Законодавство
+title: Археологічна періодизація
+description: Археологічна періодизація розроблена у першій половині XIX століття на археологічних матеріалах Скандинавії. В подальшому блискуче підтверджена на інших територіях Старого Світу і набула значення загальної культурно-історичної періодизації.
 ---
 
 <section class="page-section">
@@ -7,8 +8,8 @@ title: Законодавство
         <div class="row">
             <div class="col-12">
                 {% for item in site.periods %}
-                <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
-                <p>{{ item.description }}</p>
+                    <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+                    <p>{{ item.description }}</p>
                 {% endfor %}
             </div>
         </div>
