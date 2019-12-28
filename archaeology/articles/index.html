@@ -6,9 +6,11 @@ title: Публікації
     <div class="page-layout">
         <div class="row">
             <div class="col-12">
-                {% for item in site.periods %}
-                <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
-                <p>{{ item.description }}</p>
+                {% assign list = site.archaeology  | where: "categories" , "articles" | sort: 'date' | reverse %}
+                {% for item in list %}
+                    <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+                    <p>{{ item.date | date: "%Y-%m-%d"  }}</p>
+                    <p>{{ item.description }}</p>
                 {% endfor %}
             </div>
         </div>

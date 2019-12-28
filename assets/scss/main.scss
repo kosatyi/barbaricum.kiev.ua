@@ -466,8 +466,7 @@
   }
 }
 
-
-.col-auto.col-contents {
+.col-auto.block-contents {
   @extend .col-md-auto;
   font-size: 0.875rem;
   margin-right: $grid-space;
@@ -482,14 +481,20 @@
   z-index: 50;
 }
 
-
-.col-text {
+.block-text {
   font-size: 1.0625rem;
   h3 + h3{
     margin-top:-1rem;
     color:#646464;
   }
 }
+
+.block-article{
+  font-size: 1.0625rem;
+  max-width:50rem;
+  margin:0 auto;
+}
+
 
 .svg-inline-icon {
   display: inline-block;

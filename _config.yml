@@ -26,16 +26,16 @@ paginate_path: /blog/page-:num/
 title: Barbaricum
 
 author:
-  name: Stepan Kosatyi
-  url: https://kosatyi.com/
-  twitter: kosatyi
+  name: Barbaricum
+  url: https://barbaricum.kiev.ua/
+  twitter: BarbaricumArch
   image:
     path:  /assets/images/profile.jpg
     height: 512
     width: 512
 
 social:
-  name: Stepan Kosatyi
+  name: Barbaricum
   links:
     - https://plus.google.com/+StepanKosatyi
     - https://twitter.com/kosatyi
@@ -51,78 +51,33 @@ social:
     pinterest: https://www.pinterest.com/kosatyi/
     github: https://github.com/kosatyi
 
-collections_dir: _collections
 
 collections:
-  laboratory:
-    output: true
-    permalink: '/laboratory/:categories/:title.html'
   archaeology:
     output: true
     permalink: '/archaeology/:categories/:title.html'
-  history:
+  laboratory:
     output: true
-    permalink: '/history/:categories/:title.html'
-  articles:
-    output: true
-    permalink: '/archaeology/articles/:title.html'
-  fonds:
-    output: true
-    permalink: '/archaeology/fonds/:title.html'
-  legislation:
-    output: true
-    permalink: '/archaeology/legislation/:title.html'
-    layout: "doc"
-  reports:
-    output: true
-    permalink: '/laboratory/reports/:title.html'
-  posts:
-    output: true
-    permalink: '/blog/:year/:month/:day/:title.html'
+    permalink: '/laboratory/:categories/:title.html'
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ''
     values:
       layout: 'default'
   - scope:
-      path: ""
-      type: "archaeology"
+      path: ''
+      type: 'posts'
+    values:
+      layout: 'article'
+      permalink: '/news/:year/:month/:day/:title.html'
+  - scope:
+      path: ''
+      type: 'archaeology'
     values:
       layout: "article"
   - scope:
-      path: ""
-      type: "history"
+      path: ''
+      type: 'laboratory'
     values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "laboratory"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "articles"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "fonds"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "reports"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "legislation"
-    values:
-      layout: "doc"
+      layout: 'article'

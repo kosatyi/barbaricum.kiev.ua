@@ -5,7 +5,8 @@ title: Законодавство
     <div class="page-layout">
         <div class="row">
             <div class="col-12">
-                {% for item in site.legislation %}
+                {% assign list = site.archaeology  | where: "categories" , "legislation" | sort: 'date' | reverse %}
+                {% for item in list %}
                     <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
                     <p>{{ item.description }}</p>
                 {% endfor %}
