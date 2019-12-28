@@ -54,6 +54,7 @@
   fill: #fff;
   background-color: rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
   &.sticky-active {
     background-color: theme-color('primary');
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -68,38 +69,44 @@
   color: #fff;
   font-size: 24px;
   text-transform: uppercase;
-  svg{
-    fill:#fff;
-    height:1.5rem;
+
+  svg {
+    fill: #fff;
+    height: 1.5rem;
   }
+
   @include hover-focus-active {
     text-decoration: none;
     color: #fff;
-    svg{
-      fill:#fff;
+    svg {
+      fill: #fff;
     }
   }
 }
 
 .page-nav {
-  &-toggle{
-    display:none;
-    svg{
-      fill:#fff;
-      height:1.5rem;
+  &-toggle {
+    display: none;
+
+    svg {
+      fill: #fff;
+      height: 1.5rem;
     }
   }
-  &-list{
+
+  &-list {
     @include display-flex;
     @include flex-direction(row);
   }
-  &-wrapper{
-    margin-left:auto;
+
+  &-wrapper {
+    margin-left: auto;
     padding: 0 $grid-space / 2;
 
     @include display-flex;
     @include flex-direction(row);
   }
+
   &-item {
     margin: 0 $grid-space / 2;
     position: relative;
@@ -112,12 +119,14 @@
       }
       .page-nav-link {
         text-decoration: none;
+
         &:after {
           width: 100%;
         }
       }
     }
   }
+
   &-link {
     @include display-flex;
     @include flex-direction(column);
@@ -126,8 +135,9 @@
     color: #fff;
     position: relative;
     @include hover-focus {
-      color:#fff;
+      color: #fff;
     }
+
     &:after {
       content: '';
       height: 2px;
@@ -138,10 +148,12 @@
       background-color: #ffd33d;
       transition: width 0.3s ease-in-out;
     }
+
     &.active {
       color: #ffd33d;
     }
   }
+
   &-menu {
     display: none;
     position: absolute;
@@ -152,10 +164,11 @@
     border-top: 1px solid theme-color('primary');
     right: 0;
     padding: $grid-space-sm 0;
+
     &-link {
       white-space: nowrap;
       padding: $grid-space-sm $grid-space;
-      @include hover-focus{
+      @include hover-focus {
         background-color: rgba(0, 0, 0, 0.1);
       }
     }
@@ -163,75 +176,87 @@
 }
 
 @include media-breakpoint-down(sm) {
-  $back-color:rgba(255, 255, 255, 0.95);
-  $link-color:invert($back-color,100);
+  $back-color: rgba(255, 255, 255, 0.95);
+  $link-color: invert($back-color, 100);
   .page-nav {
-    &-wrapper:hover{
-      .page-nav-list{
-        display:block;
+    &-wrapper:hover {
+      .page-nav-list {
+        display: block;
       }
-      .page-nav-toggle{
-        background-color:$back-color;
-        z-index:10;
-        svg{
-          fill:$link-color;
+
+      .page-nav-toggle {
+        background-color: $back-color;
+        z-index: 10;
+
+        svg {
+          fill: $link-color;
         }
       }
     }
-    &-wrapper{
+
+    &-wrapper {
       position: relative;
     }
-    &-toggle{
-        @include display-flex;
-        @include flex-direction(row);
-        padding: 0 $grid-space;
-        margin:0 (-$grid-space / 2);
-        align-items: center;
-        justify-content: center;
+
+    &-toggle {
+      @include display-flex;
+      @include flex-direction(row);
+      padding: 0 $grid-space;
+      margin: 0 (-$grid-space / 2);
+      align-items: center;
+      justify-content: center;
     }
-    &-list{
-      z-index:5;
-      display:none;
+
+    &-list {
+      z-index: 5;
+      display: none;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      background-color:$back-color;
+      background-color: $back-color;
       border-top: 1px solid $back-color;
-      position:absolute;
-      top:100%;
-      right:0;
+      position: absolute;
+      top: 100%;
+      right: 0;
       padding: $grid-space-sm 0;
     }
+
     &-item {
-      padding:0;
-      margin:0;
+      padding: 0;
+      margin: 0;
     }
-    &-link,&-menu-link {
-      color:$link-color;
+
+    &-link, &-menu-link {
+      color: $link-color;
       @include hover-focus {
-        color:$link-color;
+        color: $link-color;
         background-color: rgba(0, 0, 0, 0.1);
       }
+
       &.active {
-        color:$link-color;
+        color: $link-color;
       }
     }
+
     &-link {
       padding: $grid-space-sm $grid-space;
       align-items: start;
-      &:after{
-        display:none;
+
+      &:after {
+        display: none;
       }
     }
+
     &-menu {
-      position:static;
-      background:transparent;
+      position: static;
+      background: transparent;
       transition: none;
-      box-shadow:none;
-      border:none;
-      padding:0;
-      display:block;
-      &-link{
-        display:block;
-        font-weight:$font-weight-normal;
+      box-shadow: none;
+      border: none;
+      padding: 0;
+      display: block;
+
+      &-link {
+        display: block;
+        font-weight: $font-weight-normal;
       }
     }
   }
@@ -240,6 +265,7 @@
 .page-footer {
   background-color: theme-color('primary');
   color: #fff;
+
   a {
     color: #fff;
   }
@@ -248,6 +274,7 @@
 .page-noise {
   $nc: rgba(0, 0, 0, .05);
   position: relative;
+
   &:before {
     z-index: 10;
     content: "";
@@ -259,6 +286,7 @@
     background-size: 4px 4px;
     background-image: linear-gradient(-45deg, $nc 25%, $tr 25%, $tr 50%, $nc 50%, $nc 75%, $tr 75%, $tr);
   }
+
   .page-layout {
     position: relative;
     z-index: 20;
@@ -271,24 +299,30 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+
   &:only-child {
     margin-top: 0;
   }
+
   > li {
     margin: 0;
     padding: 0;
     display: inline-block;
+
     &:before {
       margin: 0 0.4rem;
       content: '/';
       color: rgba(255, 255, 255, 0.5);
     }
+
     &:first-child:before {
       display: none;
     }
+
     > a {
       color: rgba(255, 255, 255, 0.9);
     }
+
     > span {
       color: rgba(255, 255, 255, 0.5);
     }
@@ -308,6 +342,7 @@
     @extend .page-cover;
     min-height: calc(100vh - #{$header-height});
   }
+
   &-banner {
     @include display-flex;
     @extend .page-noise;
@@ -316,8 +351,9 @@
     padding-top: ($header-height + $toolbar-height);
     margin-top: -($header-height + $toolbar-height);
     background-color: #0f1212;
-    background-image: url('https://i.imgur.com/qiYZtXy.jpg');
+    background-image: url('/assets/images/cover/stars.jpg');
   }
+
   &-header {
     @include display-flex;
     @extend .page-cover;
@@ -325,15 +361,19 @@
     margin-top: -($header-height + $toolbar-height);
     background-color: #0f1212;
   }
+
   &-gray {
     background-color: #efefef;
   }
+
   &-dark {
     background-color: #0f1212;
   }
+
   &-green {
     background-color: #5c6b34;
   }
+
   &-blue {
     background-color: #0c5460;
   }
@@ -343,6 +383,7 @@
   @extend .col-md-4;
   position: relative;
   z-index: 5;
+
   &.featured {
     z-index: 10;
     margin-top: -$grid-gutter-width;
@@ -378,9 +419,11 @@
   background-color: #fff;
   color: #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
   &.main {
     z-index: 10;
   }
+
   &-header {
     padding: $grid-space;
     text-align: center;
@@ -388,10 +431,12 @@
     font-weight: $font-weight-bold;
     border-bottom: 1px solid #efefef;
   }
+
   &-content {
     padding: $grid-space;
     @include flex(1);
   }
+
   &-footer {
     padding: $grid-space;
     background-color: #efefef;
@@ -407,9 +452,7 @@
 .row-button {
   @extend .row;
   .col-button {
-    @extend .mb-3;
-    @extend .mb-md-0;
-    @extend .col-md-4;
+    @extend .col-md;
     &:last-child {
       @extend .mb-0;
     }
@@ -418,6 +461,42 @@
     @extend .btn-lg;
     @extend .btn-block;
     @extend .btn-outline-light;
+    @extend .text-bold;
     background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+
+.col-auto.col-contents {
+  @extend .col-md-auto;
+  font-size: 0.875rem;
+  margin-right: $grid-space;
+  margin-top: $grid-gutter-width;
+  max-width: 300px;
+  background-color: #efefef;
+  padding: $grid-space;
+  height: calc(100vh - #{$header-height});
+  overflow: auto;
+  position: sticky;
+  top: $header-height;
+  z-index: 50;
+}
+
+
+.col-text {
+  font-size: 1.0625rem;
+  h3 + h3{
+    margin-top:-1rem;
+    color:#646464;
+  }
+}
+
+.svg-inline-icon {
+  display: inline-block;
+  font-size: 0;
+  svg {
+    height: 1rem;
+    width: auto;
+    fill: inherit;
   }
 }

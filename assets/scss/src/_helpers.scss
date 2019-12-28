@@ -74,6 +74,7 @@ strong, b, .text-bold {
     max-width: none;
     max-height: 100px;
     display: block;
+    margin:0 auto;
   }
 }
 
@@ -89,32 +90,3 @@ strong, b, .text-bold {
   top: $header-height + $grid-gutter-width;
 }
 
-.row {
-  .col-contents {
-    @extend .col-md-auto;
-    font-size: 0.875rem;
-    margin-right: $grid-space;
-    margin-top: $grid-gutter-width;
-    max-width: 300px;
-    background-color: #efefef;
-    padding: $grid-space !important;
-    height: calc(100vh - #{$header-height});
-    overflow: auto;
-    position: sticky;
-    top: $header-height;
-    z-index: 50;
-  }
-  .col-text {
-
-  }
-}
-
-.svg-inline-icon{
-  display:inline-block;
-  font-size:0;
-  svg{
-    height:1rem * $line-height-base;
-    width:auto;
-    fill:inherit;
-  }
-}

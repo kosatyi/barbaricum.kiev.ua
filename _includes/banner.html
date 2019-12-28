@@ -3,19 +3,18 @@
         <div class="row d-cover">
             <div class="col-12 d-cover a-centered">
                 <div class="width-full text-light">
-                    {% if page.legislation %}
-                        <h5>
-                            <a href="{{ page.legislation.link }}" class="text-white">
-                                {{ page.legislation.organization }}
-                            </a>
-                        </h5>
-                        <p>№ {{ page.legislation.number }} &bull; {{ page.legislation.date }}</p>
-                    {% endif %}
                     {% if page.title %}
                         <h1>{{ page.title }}</h1>
                     {% endif %}
                     {% if page.description %}
                         <h5>{{ page.description }}</h5>
+                    {% endif %}
+                    {% if page.legislation %}
+                    <p>
+                        <a href="{{ page.legislation.link }}" class="text-white">{{ page.legislation.organization }}</a> &bull;
+                        <span>№ {{ page.legislation.number }}</span> &bull;
+                        <span>{{ page.legislation.date }}</span>
+                    </p>
                     {% endif %}
                     {% include breadcrumbs.html %}
                 </div>

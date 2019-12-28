@@ -3,6 +3,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-archives
 
 port: 4444
 
@@ -74,7 +75,7 @@ collections:
     layout: "doc"
   reports:
     output: true
-    permalink: '/archaeology/reports/:title.html'
+    permalink: '/laboratory/reports/:title.html'
   posts:
     output: true
     permalink: '/blog/:year/:month/:day/:title.html'

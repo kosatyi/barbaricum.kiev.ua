@@ -1,9 +1,16 @@
 .page-layout {
-  padding-bottom:$grid-gutter;
-  padding-left:$grid-space;
-  padding-right:$grid-space;
+  padding-bottom: $grid-gutter;
+  padding-left: $grid-space;
+  padding-right: $grid-space;
   @include media-breakpoint-down(xs) {
     padding: 0 0 $grid-space 0;
+  }
+}
+
+.mt-c {
+  margin-top: $grid-gutter;
+  @include media-breakpoint-down(xs) {
+    margin-top: $grid-space;
   }
 }
 
@@ -12,19 +19,9 @@
   [class*='col-'], .col {
     padding-top: $grid-gutter;
   }
-  .row.child {
-    margin: 0 -$grid-space;
+  @include media-breakpoint-down(xs) {
     [class*='col-'], .col {
       padding-top: $grid-space;
-      &:first-child {
-        padding-top: 0;
-      }
     }
-  }
-  @include media-breakpoint-down(xs) {
-      margin: 0;
-      > [class*='col-'],.col {
-        padding-top: $grid-space;
-      }
   }
 }
