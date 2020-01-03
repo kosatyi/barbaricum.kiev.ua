@@ -18,7 +18,7 @@ baseurl: ''
 url:  https://kosatyi.com
 
 paginate: 10
-paginate_path: /blog/page-:num/
+paginate_path: /news/page-:num/
 
 #analytics: UA-25258708-4
 #sharethis: property=59985e446692a7001120ec59&product=inline-share-buttons
@@ -55,10 +55,10 @@ social:
 collections:
   archaeology:
     output: true
-    permalink: '/archaeology/:categories/:title.html'
+    permalink: '/archaeology/:path.html'
   laboratory:
     output: true
-    permalink: '/laboratory/:categories/:title.html'
+    permalink: '/laboratory/:path.html'
 
 defaults:
   - scope:
@@ -72,12 +72,14 @@ defaults:
       layout: 'article'
       permalink: '/news/:year/:month/:day/:title.html'
   - scope:
-      path: ''
-      type: 'archaeology'
+      path: '_archaeology'
     values:
       layout: "article"
   - scope:
-      path: ''
-      type: 'laboratory'
+      path: '_archaeology/legislation'
+    values:
+      layout: 'document'
+  - scope:
+      path: '_laboratory'
     values:
       layout: 'article'

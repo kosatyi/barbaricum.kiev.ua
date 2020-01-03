@@ -6,10 +6,14 @@ description: Археологічна культура — термін, ужи�
 <section class="page-section">
     <div class="page-layout">
         <div class="row">
-            <div class="col-12">
-                {% for item in site.periods %}
-                <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
-                <p>{{ item.description }}</p>
+            <div class="col-12 block article">
+                {% assign list = site.archaeology  | where_exp: "item", "item.path contains 'cultures'" %}
+                {% assign list = list | sort: 'date' | reverse %}
+                {% for item in list %}
+                <article class="block entry">
+                    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+                    {{ item.excerpt }}
+                </article>
                 {% endfor %}
             </div>
         </div>

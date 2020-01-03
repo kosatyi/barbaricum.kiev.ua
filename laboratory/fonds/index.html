@@ -5,8 +5,13 @@ title: Фонди лабораторії
 <section class="page-section">
     <div class="page-layout">
         <div class="row">
-            <div class="col-12">
-
+            <div class="col-12 block article">
+                {% for item in site.data.fonds %}
+                <article class="block entry">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.summary }}</p>
+                </article>
+                {% endfor %}
             </div>
         </div>
     </div>
