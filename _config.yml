@@ -14,7 +14,7 @@ exclude:
 
 
 baseurl: ''
-url:  https://kosatyi.com
+url:  https://barbaricum.kiev.ua
 
 paginate: 10
 paginate_path: /news/page-:num/
