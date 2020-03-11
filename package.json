@@ -2,11 +2,11 @@
   "name": "barbaricum.kiev.ua",
   "version": "0.0.1",
   "dependencies": {
-    "@fortawesome/fontawesome-pro": "^5.11.2",
+    "@fortawesome/fontawesome-pro": "^5.12.1",
     "animatewithsass": "^3.2.1",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.0",
+    "popper.js": "^1.16.1",
     "roboto-fontface": "^0.8.0"
   },
   "devDependencies": {
