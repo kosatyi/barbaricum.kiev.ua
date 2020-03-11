@@ -337,21 +337,21 @@
 
 (function(){
     function onScroll(){
-        document.scrollingElement.classList.toggle('scrolled',window.scrollY > 0);
+        document.scrollingElement.classList.toggle('scrolled',sjt.window.scrollY > 0);
         this.list = [].slice.call(document.querySelectorAll('.sticky-top,.sticky-bottom'));
         this.list.forEach(function (item) {
             var value, record = item.getBoundingClientRect();
             if (item.classList.contains('sticky-top')) {
                 value = Math.round(record.top);
-                value = (window.scrollY > 0 && value === 0 || value === 1);
+                value = (sjt.window.scrollY > 0 && value === 0 || value === 1);
             }
             if (item.classList.contains('sticky-bottom')) {
-                value = window.scrollY > 0 && record.bottom === window.innerHeight;
+                value = sjt.window.scrollY > 0 && record.bottom === window.innerHeight;
             }
             item.classList.toggle('sticky-active', value);
         });
     }
-    sjt.on(window,'scroll',onScroll);
-    sjt.on(window,'resize',onScroll);
+    sjt.on(sjt.window,'scroll',onScroll);
+    sjt.on(sjt.window,'resize',onScroll);
     onScroll();
 })();
