@@ -1,0 +1,3 @@
+<figure class="embed-responsive embed-responsive-16by9">
+    <img class="embed-responsive-item" src="//images.weserv.nl/?url={{ include.src }}&w=720&h=480&fit=cover&a=attention">
+</figure>
