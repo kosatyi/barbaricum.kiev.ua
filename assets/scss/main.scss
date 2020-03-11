@@ -2,14 +2,15 @@
 @import "src/fonts";
 @import "src/variables";
 @import "src/modules";
+@import "src/forms";
 @import "src/type";
 @import "src/container";
 @import "src/helpers";
 
+
 .page-layout {
   @extend .container;
 }
-
 .page-main {
   min-height: calc(100vh - #{$header-height} - #{$toolbar-height})
 }
@@ -24,7 +25,7 @@
   fill: #fff;
   z-index: 100;
   position: relative;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: $font-weight-bold;
 }
 
@@ -38,7 +39,6 @@
   @include display-flex;
   @include flex-direction(row);
   @include flex-center;
-  text-transform: uppercase;
   padding: 0 $grid-space/2;
 }
 
@@ -274,9 +274,8 @@
 .page-noise {
   $nc: rgba(0, 0, 0, .05);
   position: relative;
-
   &:before {
-    z-index: 10;
+    z-index: 1;
     content: "";
     position: absolute;
     top: 0;
@@ -286,12 +285,24 @@
     background-size: 4px 4px;
     background-image: linear-gradient(-45deg, $nc 25%, $tr 25%, $tr 50%, $nc 50%, $nc 75%, $tr 75%, $tr);
   }
-
   .page-layout {
     position: relative;
     z-index: 20;
   }
 }
+
+.page-darkness {
+  &:after{
+    content:'';
+    background-color:rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
 .page-breadcrumbs {
   padding: 0;
@@ -299,30 +310,24 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-
   &:only-child {
     margin-top: 0;
   }
-
   > li {
     margin: 0;
     padding: 0;
     display: inline-block;
-
     &:before {
       margin: 0 0.4rem;
       content: '/';
       color: rgba(255, 255, 255, 0.5);
     }
-
     &:first-child:before {
       display: none;
     }
-
     > a {
       color: rgba(255, 255, 255, 0.9);
     }
-
     > span {
       color: rgba(255, 255, 255, 0.5);
     }
@@ -342,7 +347,6 @@
     @extend .page-cover;
     min-height: calc(100vh - #{$header-height});
   }
-
   &-banner {
     @include display-flex;
     @extend .page-noise;
@@ -353,7 +357,6 @@
     background-color: #0f1212;
     background-image: url('/assets/images/cover/stars.jpg');
   }
-
   &-header {
     @include display-flex;
     @extend .page-cover;
@@ -361,19 +364,15 @@
     margin-top: -($header-height + $toolbar-height);
     background-color: #0f1212;
   }
-
   &-gray {
     background-color: #efefef;
   }
-
   &-dark {
     background-color: #0f1212;
   }
-
   &-green {
     background-color: #5c6b34;
   }
-
   &-blue {
     background-color: #0c5460;
   }
@@ -516,5 +515,24 @@
 .block.article{
   font-size: 1.0625rem;
   max-width:50rem;
-  margin:0 auto;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+.block.article{
+  li{
+    position:relative;
+    padding-left:1.125rem;
+    &:before{
+      content:'⊛';
+      position:absolute;
+      color:$text-muted;
+      left:0;
+    }
+  }
+}
+
+.table-container{
+
 }

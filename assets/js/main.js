@@ -310,7 +310,6 @@
 
 (function () {
     function matchLinks() {
-        console.log(location.href);
         var href = location.href, expr;
         sjt.findAll('[href],[data-rel]').filter(function (el) {
             el.classList.remove('active');
@@ -324,6 +323,19 @@
     sjt.on(window,'historychange',matchLinks);
     sjt.on(window,'hashchange',matchLinks);
 })();
+
+
+(function () {
+    var cover = sjt.findAll('[data-cover]');
+    cover.forEach(function(element){
+        element.style.backgroundImage = 'url('+element.getAttribute('data-cover')+')';
+        element.style.backgroundAttachment = 'scroll';
+        element.classList.add('page-noise');
+        element.classList.add('page-darkness');
+    })
+})();
+
+
 
 
 (function(){

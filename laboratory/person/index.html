@@ -1,23 +1,19 @@
 ---
 title: Склад лабораторії
-landing: true
 ---
 
-<section id="welcome" class="page-section page-section-banner">
-    <div class="page-layout d-cover">
-        <div class="row d-cover">
-            <div class="col-12 d-cover a-centered">
-                <div class="text-center width-full text-light">
-                    <h1>Склад лабораторії</h1>
-                    <div class="row-button">
-                        <div class="col-button">
-                            <a href="#laboratory" class="btn">Лабораторія</a>
-                        </div>
-                        <div class="col-button">
-                            <a href="#archaeology" class="btn">Археологія</a>
-                        </div>
-                    </div>
-                </div>
+<section class="page-section">
+    <div class="page-layout">
+        <div class="row">
+            <div class="col-12 block article">
+                {% assign list = site.laboratory  | where_exp: "item", "item.path contains 'person'" %}
+                {% assign list = list | sort: 'date' | reverse %}
+                {% for item in list %}
+                <article class="block entry">
+                    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+                    <p>{{ item.excerpt | strip_html }}</p>
+                </article>
+                {% endfor %}
             </div>
         </div>
     </div>

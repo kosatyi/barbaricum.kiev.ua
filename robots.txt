@@ -1,3 +1,4 @@
-# robots.txt
+#robots.txt
 User-agent: *
-Disallow: /
+Allow: /
+Sitemap: /sitemap.xml

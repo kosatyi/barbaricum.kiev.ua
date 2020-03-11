@@ -3,7 +3,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-archives
 
 port: 4444
 
@@ -37,12 +36,10 @@ author:
 social:
   name: Barbaricum
   links:
-    - https://plus.google.com/+StepanKosatyi
-    - https://twitter.com/kosatyi
-    - https://facebook.com/kosatyi
+    - https://twitter.com/BarbaricumArch
+    - https://facebook.com/barbaricum
     - https://www.pinterest.com/kosatyi/
-    - https://www.linkedin.com/in/stepankosatyi/
-    - https://github.com/kosatyi
+    - https://github.com/kosatyi/barbarcum.kiev.ua
   profiles:
     facebook: https://facebook.com/kosatyi
     twitter: https://twitter.com/kosatyi

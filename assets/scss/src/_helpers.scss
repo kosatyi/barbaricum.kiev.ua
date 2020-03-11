@@ -14,6 +14,19 @@ strong, b, .text-bold {
   width: 100%;
 }
 
+.bt-1{
+  border-top:1px solid rgba(255,255,255,0.2);
+}
+
+.text-transform-none{
+  text-transform: initial;
+}
+.text-ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .text-white{
   fill:#fff;
 }
@@ -89,4 +102,3 @@ strong, b, .text-bold {
   z-index: 50;
   top: $header-height + $grid-gutter-width;
 }
-
