@@ -4,6 +4,7 @@
 {% assign list    = site.html_pages %}
 {% if count > 0 %}
 <ol class="page-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+{% assign total  = 0 %}
 {% for part in path %}
 {% assign result  = result | push: part %}
 {% assign match   = result | join: '/' %}
@@ -14,8 +15,8 @@
 {% if current.title %}
 {% if forloop.rindex > 1 %}
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-    {% assign position  = forloop.rindex | minus: 1 %}
-    <meta itemprop="position" content="{{ position }}">
+    {% assign total  = total | plus: 1 %}
+    <meta itemprop="position" content="{{ total }}">
     <a href="{{current.url | absolute_url}}" itemprop="item">
         <span itemprop="name">{{ current.title }}</span>
     </a>
