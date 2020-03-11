@@ -1,6 +1,5 @@
 (function () {
 
-
     var sjt = {};
 
     sjt.utils = {};
@@ -84,12 +83,10 @@
     };
 
     sjt.on = function () {
-        //console.log('addEventListener',arguments);
         this._event_('addEventListener', arguments);
     };
 
     sjt.off = function () {
-        //console.log('removeEventListener',arguments);
         this._event_('removeEventListener', arguments);
     };
 
@@ -195,11 +192,8 @@
 
 
 (function () {
-
-
     function normalizeNode(node){
         var new_node;
-        console.log(node);
         for (var i = 0, children = node.childNodes, nodeCount = children.length; i < nodeCount; i++) {
             var child = children[i];
             if (child.nodeType == 1) {
