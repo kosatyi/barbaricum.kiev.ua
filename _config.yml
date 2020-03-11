@@ -30,9 +30,9 @@ author:
   url: https://barbaricum.kiev.ua/
   twitter: BarbaricumArch
   image:
-    path:  /assets/favicon/android-icon-192x192.png
-    height: 192
-    width: 192
+    path:  /assets/images/banner.png
+    height: 720
+    width: 480
 
 social:
   name: Barbaricum
@@ -55,6 +55,10 @@ defaults:
       path: ''
     values:
       layout: 'default'
+      image:
+        path:  '/assets/images/banner.png'
+        height: 720
+        width: 480
   - scope:
       path: ''
       type: 'posts'
