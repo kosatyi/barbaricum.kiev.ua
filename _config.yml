@@ -29,9 +29,9 @@ author:
   url: https://barbaricum.kiev.ua/
   twitter: BarbaricumArch
   image:
-    path:  /assets/images/profile.jpg
-    height: 512
-    width: 512
+    path:  /assets/favicon/android-icon-192x192.png
+    height: 192
+    width: 192
 
 social:
   name: Barbaricum
