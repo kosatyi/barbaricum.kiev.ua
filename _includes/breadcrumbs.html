@@ -14,7 +14,9 @@
 {% if current.title %}
 {% if forloop.rindex > 1 %}
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-    <a href="{{ site.url }}{{site.baseurl}}{{current.url}}" itemprop="item">
+    {% assign position  = forloop.rindex | minus: 1 %}
+    <meta itemprop="position" content="{{ position }}">
+    <a href="{{current.url | absolute_url}}" itemprop="item">
         <span itemprop="name">{{ current.title }}</span>
     </a>
 </li>
