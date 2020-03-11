@@ -335,9 +335,6 @@
     })
 })();
 
-
-
-
 (function(){
     function onScroll(){
         document.scrollingElement.classList.toggle('scrolled',window.scrollY > 0);
