@@ -50,6 +50,9 @@ collections:
   laboratory:
     output: true
     permalink: '/laboratory/:path.html'
+  journal:
+    output: true
+    permalink: '/journal/:path.html'
 
 defaults:
   - scope:
