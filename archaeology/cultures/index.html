@@ -477,20 +477,3 @@ redirect_from: /cultures/
         </div>
     </div>
 </section>
-
-<section class="page-section">
-    <div class="page-layout">
-        <div class="row">
-            <div class="col-12 block article">
-                {% assign list = site.archaeology | where_exp: "item", "item.path contains 'cultures'" %}
-                {% assign list = list | sort: 'date' | reverse %}
-                {% for item in list %}
-                <article class="block entry">
-                    <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
-                    {{ item.excerpt }}
-                </article>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
