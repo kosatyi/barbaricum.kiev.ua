@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include meta.html %}
+{% include resources.html %}
+</head>
+<body>
+<main class="page">
+{% include header.html %}
+{% include banner.html %}
+<div class="page-main">
+    <section class="page-section">
+        <div class="page-layout">
+            <div class="row">
+                <div class="col block {{ page.container | default: 'article'}}">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% include footer.html %}
+</main>
+{% include import.html %}
+</body>
+</html>

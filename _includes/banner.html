@@ -9,6 +9,10 @@
                     {% if page.description %}
                         <h5>{{ page.description }}</h5>
                     {% endif %}
+                    {% if page.journal %}
+                        <h5>{{page.journal.header}}</h5>
+                        <p>{{page.journal.content}}</p>
+                    {% endif %}
                     {% if page.legislation %}
                     <p>
                         <a href="{{ page.legislation.link }}" class="text-white">{{ page.legislation.organization }}</a> &bull;

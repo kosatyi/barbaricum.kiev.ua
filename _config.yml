@@ -83,3 +83,7 @@ defaults:
       path: '_laboratory'
     values:
       layout: 'article'
+  - scope:
+      path: '_journal'
+    values:
+      layout: 'journal'
