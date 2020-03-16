@@ -378,6 +378,13 @@
   }
 }
 
+
+.page-section{
+  & + & {
+    border-top:1px solid #efefef;
+  }
+}
+
 .col-price {
   @extend .col-md-4;
   position: relative;
