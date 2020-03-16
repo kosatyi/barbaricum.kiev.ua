@@ -11,6 +11,10 @@ title: Журнал
                 {% for item in list %}
                 <article class="block entry">
                     <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+                    <p class="small">
+                        {{ item.journal.header }}<br />
+                        {{ item.journal.content }}
+                    </p>
                     <p>{{ item.excerpt | strip_html }}</p>
                 </article>
                 {% endfor %}
