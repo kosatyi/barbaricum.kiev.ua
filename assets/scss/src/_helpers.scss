@@ -102,3 +102,12 @@ strong, b, .text-bold {
   z-index: 50;
   top: $header-height + $grid-gutter-width;
 }
+
+figure{
+  img{
+    max-width:100%;
+  }
+}
+.image-center{
+
+}

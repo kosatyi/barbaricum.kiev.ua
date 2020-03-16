@@ -323,7 +323,8 @@
     var cover = sjt.findAll('[data-cover]');
     cover.forEach(function(element){
         element.style.backgroundImage = 'url('+element.getAttribute('data-cover')+')';
-        element.style.backgroundAttachment = 'scroll';
+        element.style.backgroundAttachment = 'fixed';
+        //element.style.backgroundSize = 'cover';
         element.classList.add('page-noise');
         element.classList.add('page-darkness');
     })
