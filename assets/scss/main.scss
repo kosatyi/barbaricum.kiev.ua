@@ -543,3 +543,11 @@
 .table-container{
 
 }
+
+.table-info{
+  &,tr,td,th{
+    border:0;
+  }
+}
+
+
