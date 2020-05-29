@@ -60,7 +60,7 @@ defaults:
     values:
       layout: 'default'
       cover:
-        path:  '/assets/images/cover/stars.jpg'
+        path:  'https://i.imgur.com/5WJwhWh.jpg'
       image:
         path:  '/assets/images/banner.png'
         height: 720

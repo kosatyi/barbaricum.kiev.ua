@@ -336,8 +336,8 @@
 
 .page-cover {
   background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
 }
 
 .page-section {
@@ -355,7 +355,7 @@
     padding-top: ($header-height + $toolbar-height);
     margin-top: -($header-height + $toolbar-height);
     background-color: #0f1212;
-    background-image: url('/assets/images/cover/stars.jpg');
+    background-image: url('https://i.imgur.com/5WJwhWh.jpg');
   }
   &-header {
     @include display-flex;
@@ -382,6 +382,21 @@
 .page-section{
   & + & {
     border-top:1px solid #efefef;
+  }
+}
+
+.page-section{
+  &-title{
+    font-size:2.5rem;
+    @include media-breakpoint-down(sm) {
+      font-size:1.8rem;
+    }
+  }
+  &-summary{
+    font-size:1.5rem;
+    @include media-breakpoint-down(sm) {
+      font-size:1.15rem;
+    }
   }
 }
 
