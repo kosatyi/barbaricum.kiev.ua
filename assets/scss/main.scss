@@ -535,10 +535,13 @@
 }
 
 .block.article{
-  font-size: 1.0625rem;
+  font-size: 1.25rem;
   max-width:50rem;
   margin-left:auto;
   margin-right:auto;
+  @include mobile {
+    font-size:1.0625rem;
+  }
 }
 
 
