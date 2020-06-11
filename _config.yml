@@ -60,7 +60,7 @@ defaults:
     values:
       layout: 'default'
       cover:
-        path:  'https://i.imgur.com/5WJwhWh.jpg'
+        path:  '/assets/images/cover/barbaricum.jpg'
       image:
         path:  '/assets/images/banner.png'
         height: 720
