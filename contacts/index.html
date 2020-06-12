@@ -4,22 +4,38 @@ permalink: /contacts/
 ---
 
 <section class="page-section">
-    <div class="page-layout d-cover">
-        <div class="row d-cover">
-            <div class="col-12 d-cover a-centered">
-                <div class="width-full">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="page-section">
     <div class="page-layout">
         <div class="row">
-            <div class="col-12">
-
+            <div class="col-12 block article">
+                <form method="post" action="https://forms.un-static.com/forms/abd880fd17b11e419f8d4fdab27e47fdb73525e8">
+                    <div class="form-group">
+                        <label>Тема</label>
+                        <select name="subject" required class="form-control">
+                            <option value="" selected="">Оберіть тему</option>
+                            <option value="Question">Запитання</option>
+                            <option value="Job Offer">Партнерство</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Заголовок</label>
+                        <input name="title" class="form-control form-control-lg">
+                    </div>
+                    <div class="form-group">
+                        <label>Автор</label>
+                        <input name="name" class="form-control" placeholder="ПІБ">
+                    </div>
+                    <div class="form-group">
+                        <label>Пошта</label>
+                        <input name="contact" class="form-control" placeholder="електронна адреса">
+                    </div>
+                    <div class="form-group">
+                        <label>Текст</label>
+                        <textarea name="text" rows="8" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Відправити</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
