@@ -18,7 +18,7 @@
     {% assign total  = total | plus: 1 %}
     <meta itemprop="position" content="{{ total }}">
     <a href="{{current.url | absolute_url}}" itemprop="item">
-        <span itemprop="name">{{ current.title }}</span>
+        <span itemprop="name">{{ current.pagename | default: current.title }}</span>
     </a>
 </li>
 {% else %}
