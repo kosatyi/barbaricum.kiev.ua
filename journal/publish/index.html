@@ -6,26 +6,26 @@ title: Додати Публікацію
     <div class="page-layout">
         <div class="row">
             <div class="col-12 block article">
-                <form>
+                <form method="post" action="https://forms.un-static.com/forms/abd880fd17b11e419f8d4fdab27e47fdb73525e8">
                     <div class="form-group">
                         <label>Заголовок</label>
-                        <input class="form-control form-control-lg">
+                        <input name="title" class="form-control form-control-lg">
                     </div>
                     <div class="form-group">
                         <label>Автор</label>
-                        <input class="form-control" placeholder="ПІБ">
+                        <input name="author" class="form-control" placeholder="ПІБ">
                     </div>
                     <div class="form-group">
                         <label>Контакти</label>
-                        <input class="form-control" placeholder="електронна адреса, телефон">
+                        <input name="contact" class="form-control" placeholder="електронна адреса, телефон">
                     </div>
                     <div class="form-group">
                         <label>Текст</label>
-                        <textarea rows="8" class="form-control"></textarea>
+                        <textarea name="text" rows="8" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Посилання на оригінал</label>
-                        <input class="form-control" placeholder="https://example.com">
+                        <input name="url" class="form-control" placeholder="https://example.com">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-success">Відправити</button>

@@ -36,13 +36,13 @@
 }
 
 @mixin mobile {
-  @include media(580px){
+  @include media-breakpoint-down(xs) {
     @content
   }
 }
 
 @mixin tablet {
-  @include media(1024px){
+  @include media-breakpoint-down(md) {
     @content
   }
 }
