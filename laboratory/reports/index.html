@@ -6,7 +6,7 @@ redirect_from: /reports/
 <section class="page-section">
     <div class="page-layout">
         <div class="row">
-            <div class="col-12 block article">
+            <div class="col-12 col-text">
                 {% assign list = site.laboratory  | where_exp: "item", "item.path contains 'reports'" %}
                 {% assign list = list | sort: 'date' | reverse %}
                 {% for item in list %}
