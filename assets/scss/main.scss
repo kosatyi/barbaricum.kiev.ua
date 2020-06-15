@@ -552,7 +552,7 @@
   }
 }
 
-.block.article{
+.block.article,.col-text{
   p{
     img{
       max-width:100%;
@@ -583,7 +583,29 @@
       font-weight:$font-weight-bold;
     }
   }
+  p.image-list{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    margin-bottom:0;
+    margin-right:-0.625rem;
+    margin-left:-0.625rem;
+    img{
+      margin-bottom:1.25rem;
+      width:calc(50% - 1.25rem);
+    }
+    @include mobile{
+      margin-right:0;
+      margin-left:0;
+      img{
+        margin-bottom:1.25rem;
+        width:100%;
+      }
+    }
+  }
 }
+
+
 
 .table-info{
   &,tr,td,th{
