@@ -590,3 +590,10 @@
     border:0;
   }
 }
+
+.table-container{
+  overflow-x:auto;
+  table{
+    min-width:640px;
+  }
+}
