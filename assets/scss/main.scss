@@ -11,6 +11,11 @@
 .page-layout {
   @extend .container;
 }
+
+.page-layout-fluid {
+  @extend .container-fluid;
+}
+
 .page-main {
   min-height: calc(100vh - #{$header-height} - #{$toolbar-height})
 }
@@ -615,7 +620,15 @@
 
 .table-container{
   overflow-x:auto;
+  background-color:#fff;
   table{
-    min-width:640px;
+    min-width:60rem;
+  }
+}
+
+.table-large{
+  td,th{
+    padding:2rem;
+    font-size:1.125rem;
   }
 }
