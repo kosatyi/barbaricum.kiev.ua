@@ -17,35 +17,10 @@
 }
 
 .page-main {
-  min-height: calc(100vh - #{$header-height} - #{$toolbar-height})
+  min-height: calc(100vh - #{$header-height})
 }
 
-.page-toolbar {
-  @include display-flex;
-  @include flex-direction(row);
-  height: $toolbar-height;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  fill: #fff;
-  z-index: 100;
-  position: relative;
-  font-size: 0.875rem;
-  font-weight: $font-weight-bold;
-}
 
-.page-toolbar-wrapper {
-  @include display-flex;
-  @include flex-direction(row);
-  padding: 0 $grid-space/2;
-}
-
-.page-toolbar-item {
-  @include display-flex;
-  @include flex-direction(row);
-  @include flex-center;
-  padding: 0 $grid-space/2;
-}
 
 .page-header {
   @include display-flex;
@@ -59,8 +34,7 @@
   fill: #fff;
   background-color: rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-
-  &.sticky-active {
+  .scrolled &,&.sticky-active {
     background-color: theme-color('primary');
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
@@ -92,26 +66,21 @@
 .page-nav {
   &-toggle {
     display: none;
-
     svg {
       fill: #fff;
       height: 1.5rem;
     }
   }
-
   &-list {
     @include display-flex;
     @include flex-direction(row);
   }
-
   &-wrapper {
     margin-left: auto;
     padding: 0 $grid-space / 2;
-
     @include display-flex;
     @include flex-direction(row);
   }
-
   &-item {
     margin: 0 $grid-space / 2;
     position: relative;
@@ -131,7 +100,6 @@
       }
     }
   }
-
   &-link {
     @include display-flex;
     @include flex-direction(column);
@@ -142,7 +110,6 @@
     @include hover-focus {
       color: #fff;
     }
-
     &:after {
       content: '';
       height: 2px;
@@ -153,12 +120,10 @@
       background-color: #ffd33d;
       transition: width 0.3s ease-in-out;
     }
-
     &.active {
       color: #ffd33d;
     }
   }
-
   &-menu {
     display: none;
     position: absolute;
@@ -169,7 +134,6 @@
     border-top: 1px solid theme-color('primary');
     right: 0;
     padding: $grid-space-sm 0;
-
     &-link {
       white-space: nowrap;
       padding: $grid-space-sm $grid-space;
@@ -501,8 +465,7 @@
   }
 }
 
-.block.contents {
-  @extend .col-md-auto;
+.t-o-c {
   font-size: 0.875rem;
   margin-right: $grid-space;
   margin-top: $grid-gutter-width;
@@ -514,6 +477,10 @@
   position: sticky;
   top: $header-height;
   z-index: 50;
+  @include media-breakpoint-down(lg) {
+    position:relative;
+    max-width: none;
+  }
 }
 
 

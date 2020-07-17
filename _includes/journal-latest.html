@@ -1,6 +1,6 @@
 {% assign list = site.journal  | where_exp: "item", "item.path contains 'journal'"  %}
-{% assign list = list | sort: 'date' | reverse %}
-{% for item in list  limit: 5  %}
+{% assign list = list | sort: 'date' | sample:5 %}
+{% for item in list %}
 {% if item.path != page.path %}
 <article class="block entry">
     <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>

@@ -275,34 +275,6 @@
 
 
 (function () {
-    return;
-    var timeout = null;
-    var wrapper = sjt.find('html');
-    var toolbar = sjt.find('.page-toolbar');
-    var event   = null;
-    var eventHandler = function () {
-        var currentOffset = toolbar.getBoundingClientRect().top;
-        var stickyOffset = parseInt( getComputedStyle(toolbar).top.replace('px','') );
-        var isStuck = currentOffset <= stickyOffset;
-        if (isStuck) {
-            toolbar.classList.add('is-sticky');
-        } else {
-            toolbar.classList.remove('is-sticky');
-        }
-    };
-    eventHandler();
-    sjt.on(window,'scroll',function(e){
-        event = e;
-        clearTimeout(timeout);
-        timeout = setTimeout(eventHandler, 0);
-    });
-    sjt.on(sjt.window,'historychange',function(e){
-        event = e;
-        eventHandler()
-    });
-})();
-
-(function () {
     function matchLinks() {
         var href = location.href, expr;
         sjt.findAll('[href],[data-rel]').filter(function (el) {
