@@ -51,7 +51,8 @@
 
   svg {
     fill: #fff;
-    height: 1.5rem;
+    height:1.5rem;
+    width:12.954375rem;
   }
 
   @include hover-focus-active {
@@ -69,6 +70,7 @@
     svg {
       fill: #fff;
       height: 1.5rem;
+      width:1.5rem;
     }
   }
   &-list {
@@ -152,21 +154,17 @@
       .page-nav-list {
         display: block;
       }
-
       .page-nav-toggle {
         background-color: $back-color;
         z-index: 10;
-
         svg {
           fill: $link-color;
         }
       }
     }
-
     &-wrapper {
       position: relative;
     }
-
     &-toggle {
       @include display-flex;
       @include flex-direction(row);
@@ -175,7 +173,6 @@
       align-items: center;
       justify-content: center;
     }
-
     &-list {
       z-index: 5;
       display: none;
@@ -187,24 +184,20 @@
       right: 0;
       padding: $grid-space-sm 0;
     }
-
     &-item {
       padding: 0;
       margin: 0;
     }
-
     &-link, &-menu-link {
       color: $link-color;
       @include hover-focus {
         color: $link-color;
         background-color: rgba(0, 0, 0, 0.1);
       }
-
       &.active {
         color: $link-color;
       }
     }
-
     &-link {
       padding: $grid-space-sm $grid-space;
       align-items: start;
@@ -213,7 +206,6 @@
         display: none;
       }
     }
-
     &-menu {
       position: static;
       background: transparent;
@@ -222,7 +214,6 @@
       border: none;
       padding: 0;
       display: block;
-
       &-link {
         display: block;
         font-weight: $font-weight-normal;
@@ -589,6 +580,7 @@
   @include tablet{
     min-width:0;
     padding-top:1rem;
+    background-color:#fafafa;
     &,tbody,thead,tr,td,th{
       display:block;
     }
@@ -597,9 +589,6 @@
       &:first-child{
         font-weight:$font-weight-bold;
       }
-    }
-    tbody{
-      background-color:#fafafa;
     }
     tr{
       background-color:#fff;

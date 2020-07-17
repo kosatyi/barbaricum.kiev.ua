@@ -1,11 +1,24 @@
 var gulp        = require('gulp');
 var sass        = require('gulp-sass');
+var svgSprite  =  require('gulp-svg-sprite');
 
 gulp.task('fonts', function(){
     return gulp.src([
         'node_modules/@fortawesome/fontawesome/webfonts/*.*',
         'node_modules/roboto-fontface/fonts/**'
     ]).pipe(gulp.dest('assets/fonts'));
+});
+
+gulp.task('svg:sprite', function(){
+    return gulp.src('_includes/icon/**/*.svg')
+        .pipe(svgSprite({
+            mode: {
+                stack: {
+                    sprite: "./sprite.svg"
+                }
+            }
+        }))
+        .pipe(gulp.dest('assets'));
 });
 
 gulp.task('scss:roboto', function() {
