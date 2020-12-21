@@ -3,6 +3,8 @@ title: Homo erectus - давні люди жили значно довше, ні
 description: Давній родич сучасної людини ще відносно недавно жив на території Південно-Східної Азії, свідчить нове дослідження
 image:
     path: https://i.imgur.com/6FvulpW.jpg
+cover:
+    path: https://i.imgur.com/6FvulpW.jpg
 ---
 
 
