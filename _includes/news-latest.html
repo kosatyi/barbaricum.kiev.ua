@@ -1,0 +1,10 @@
+{% assign list = site.posts %}
+{% assign list = list | sort: 'date' | sample:5 %}
+{% for item in list %}
+{% if item.path != page.path %}
+<article class="block entry">
+    <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+    <p>{{ item.description }}</p>
+</article>
+{% endif %}
+{% endfor %}
