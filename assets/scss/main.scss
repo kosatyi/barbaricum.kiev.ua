@@ -449,10 +449,17 @@
 .svg-inline-icon {
   display: inline-block;
   font-size: 0;
+  use{
+    height:1rem;
+  }
   svg {
-    height: 1rem;
-    width: auto;
-    fill: inherit;
+    height:1rem;
+  }
+}
+
+.svg-square{
+  svg{
+    width:1rem;
   }
 }
 
@@ -567,8 +574,6 @@
     }
   }
 }
-
-
 
 .table-info{
   &,tr,td,th{

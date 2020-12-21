@@ -11,13 +11,7 @@ gulp.task('fonts', function(){
 
 gulp.task('svg:sprite', function(){
     return gulp.src('_includes/icon/**/*.svg')
-        .pipe(svgSprite({
-            mode: {
-                stack: {
-                    sprite: "./sprite.svg"
-                }
-            }
-        }))
+        .pipe(svgSprite())
         .pipe(gulp.dest('assets'));
 });
 

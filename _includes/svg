@@ -1,1 +1,5 @@
-<svg fill="{{ include.color | defaults: rgb(0,0,0}}"><use xlink:href="/assets/stack/sprite.svg?v={{ site.github.build_revision }}#{{ include.src }}"></use></svg>
+<svg>
+<use xlink:href="/assets/stack/svg/sprite.stack.svg?v={{ site.github.build_revision }}#{{ include.src }}"
+    href="/assets/stack/svg/sprite.stack.svg?v={{ site.github.build_revision }}#{{ include.src }}">
+</use>
+</svg>
