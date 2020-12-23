@@ -28,6 +28,62 @@ p{
   }
 }
 
+p {
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+ul:not(.list){
+  li {
+    position: relative;
+    padding-left: 1.125rem;
+    &:before {
+      content: '•';
+      position: absolute;
+      color: $text-muted;
+      left: 0;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  &, tr, td, th {
+    border: 1px solid $table-border-color;
+  }
+  td, th {
+    padding: .75rem;
+    vertical-align: top;
+  }
+  th {
+    font-weight: $font-weight-bold;
+  }
+}
+
+p.image-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+  img {
+    margin-bottom: 1.25rem;
+    width: calc(50% - 1.25rem);
+  }
+  @include mobile {
+    margin-right: 0;
+    margin-left: 0;
+    img {
+      margin-bottom: 1.25rem;
+      width: 100%;
+    }
+  }
+}
+
 
 h1,h2,h3,h4,h5,ul,ol,p,hr,figure{
   margin: 0 0 $grid-space 0;
