@@ -49,7 +49,7 @@ ul:not(.list){
   }
 }
 
-table {
+table:not(.table) {
   width: 100%;
   &, tr, td, th {
     border: 1px solid $table-border-color;
