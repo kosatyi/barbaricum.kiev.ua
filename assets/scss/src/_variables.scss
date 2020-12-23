@@ -1,9 +1,13 @@
 @import '../modules/bootstrap/functions';
 
-$grid-gutter-width:2.5rem;
+$enable-responsive-font-sizes: true;
+
+$grid-gutter-width:2rem;
 $grid-gutter:$grid-gutter-width;
 $grid-space:$grid-gutter/2;
 $grid-space-sm:$grid-gutter/4;
+
+$breadcrumb-font-size: 1.125rem;
 
 $font-family-base:'Roboto', sans-serif;
 

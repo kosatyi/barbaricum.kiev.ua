@@ -7,7 +7,6 @@
 @import "src/container";
 @import "src/helpers";
 
-
 .page-layout {
   @extend .container;
 }
@@ -32,11 +31,11 @@
   z-index: 100;
   color: #fff;
   fill: #fff;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, .2);
+  box-shadow:0 0 1px 1px rgba(0, 0, 0, .2);
   .scrolled &,&.sticky-active {
     background-color: theme-color('primary');
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
   }
 }
 
@@ -86,6 +85,7 @@
   &-item {
     margin: 0 $grid-space / 2;
     position: relative;
+    @include font-size(1.125rem);
     @include display-flex;
     @include flex-direction(column);
     @include hover-focus {
@@ -147,7 +147,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-  $back-color: rgba(255, 255, 255, 0.95);
+  $back-color: rgba(255, 255, 255, 1);
   $link-color: invert($back-color, 100);
   .page-nav {
     &-wrapper:hover {
@@ -163,7 +163,7 @@
       }
     }
     &-wrapper {
-      position: relative;
+      //position: relative;
     }
     &-toggle {
       @include display-flex;
@@ -179,10 +179,14 @@
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       background-color: $back-color;
       border-top: 1px solid $back-color;
-      position: absolute;
-      top: 100%;
+      position: fixed;
+      left:0;
+      top: $header-height;
       right: 0;
       padding: $grid-space-sm 0;
+      bottom:0;
+      height:calc(100% - #{$header-height});
+      overflow-y:auto;
     }
     &-item {
       padding: 0;
@@ -225,7 +229,6 @@
 .page-footer {
   background-color: theme-color('primary');
   color: #fff;
-
   a {
     color: #fff;
   }
@@ -263,10 +266,9 @@
   }
 }
 
-
 .page-breadcrumbs {
+  @include font-size(1.125rem);
   padding: 0;
-  font-size: 1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -338,24 +340,41 @@
   }
 }
 
-
 .page-section{
   & + & {
     border-top:1px solid #efefef;
   }
 }
 
-.page-section{
+.page-section {
   &-title{
-    font-size:2.5rem;
-    @include tablet {
-      font-size:1.5rem;
-    }
+    @include font-size(2.5rem);
   }
   &-summary{
-    font-size:1.5rem;
-    @include tablet {
-      font-size:1.15rem;
+    @include font-size(1.5rem);
+  }
+}
+
+.page-section-buttons{
+  display:flex;
+  flex-direction: row;
+  .btn{
+    @extend .btn;
+    @extend .btn-lg;
+    @extend .btn-block;
+    @extend .btn-outline-light;
+    @extend .text-bold;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  .btn + .btn{
+    margin-top:0;
+    margin-left:1rem;
+  }
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    .btn + .btn{
+      margin-top:1rem;
+      margin-left:0;
     }
   }
 }
@@ -399,11 +418,9 @@
   background-color: #fff;
   color: #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
   &.main {
     z-index: 10;
   }
-
   &-header {
     padding: $grid-space;
     text-align: center;
@@ -411,12 +428,10 @@
     font-weight: $font-weight-bold;
     border-bottom: 1px solid #efefef;
   }
-
   &-content {
     padding: $grid-space;
     @include flex(1);
   }
-
   &-footer {
     padding: $grid-space;
     background-color: #efefef;
@@ -426,23 +441,6 @@
       background-color: #7769c1;
       color: #fff;
     }
-  }
-}
-
-.row-button {
-  @extend .row;
-  .col-button {
-    @extend .col-md;
-    &:last-child {
-      @extend .mb-0;
-    }
-  }
-  .btn {
-    @extend .btn-lg;
-    @extend .btn-block;
-    @extend .btn-outline-light;
-    @extend .text-bold;
-    background-color: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -483,7 +481,7 @@
 
 
 .col-text{
-  font-size: 1.125rem;
+  //font-size: 1.125rem;
 }
 
 .col-article{

@@ -1,5 +1,5 @@
 <svg>
-<use xlink:href="/assets/stack/svg/sprite.stack.svg?v={{ site.github.build_revision }}#{{ include.src }}"
-    href="/assets/stack/svg/sprite.stack.svg?v={{ site.github.build_revision }}#{{ include.src }}">
+<use xlink:href="/assets/sprite.svg?v={{ site.github.build_revision }}#{{ include.src }}"
+    href="/assets/sprite.svg?v={{ site.github.build_revision }}#{{ include.src }}">
 </use>
 </svg>

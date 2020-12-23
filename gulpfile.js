@@ -1,7 +1,7 @@
 var gulp        = require('gulp');
 var sass        = require('gulp-sass');
-var svgSprite  =  require('gulp-svg-sprite');
-
+var svgSprite   =  require('gulp-svg-sprite');
+var rename      = require('gulp-rename');
 gulp.task('fonts', function(){
     return gulp.src([
         'node_modules/@fortawesome/fontawesome/webfonts/*.*',
@@ -11,7 +11,16 @@ gulp.task('fonts', function(){
 
 gulp.task('svg:sprite', function(){
     return gulp.src('_includes/icon/**/*.svg')
-        .pipe(svgSprite())
+        .pipe(svgSprite({
+            mode: {
+                stack: {
+                    sprite: "./sprite.svg"
+                }
+            }
+        }))
+        .pipe(rename({
+            dirname: ''
+        }))
         .pipe(gulp.dest('assets'));
 });
 

@@ -1,9 +1,33 @@
 th{
   font-weight:$headings-font-weight;
 }
+
 h1,h2,h3,h4,h5{
   @extend .clearfix;
 }
+
+p, blockquote ,ul , ol {
+  @include font-size(1.125rem);
+}
+h1,h2{
+  @include font-size(2.5rem);
+}
+h3{
+  @include font-size(1.5rem);
+}
+h4{
+  @include font-size(1.25rem);
+}
+h5{
+  @include font-size(1.125rem);
+}
+
+p{
+  img{
+    max-width:100%;
+  }
+}
+
 
 h1,h2,h3,h4,h5,ul,ol,p,hr,figure{
   margin: 0 0 $grid-space 0;

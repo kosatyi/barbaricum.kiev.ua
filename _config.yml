@@ -69,7 +69,7 @@ defaults:
       path: ''
       type: 'posts'
     values:
-      layout: 'article'
+      layout: 'news'
       permalink: '/news/:year/:month/:day/:title.html'
   - scope:
       path: '_archaeology'

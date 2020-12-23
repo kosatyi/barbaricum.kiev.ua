@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include meta.html %}
+    {% include resources.html %}
+    <link rel="preload" as="script" href="https://uazmi.org/informer.js?limit=5&id=history&category=історія" />
+    <link rel="preload" as="script" href="https://uazmi.org/informer.js?limit=5&id=archaeology&category=археологи,археологія,розкопки" />
+</head>
+<body>
+<main class="page">
+    {% include header.html %}
+    {% include banner.html %}
+    <div class="page-main">
+        <section class="page-section">
+            <div class="page-layout">
+                <div class="row">
+                    <section class="col-lg-8">
+                        {{ content }}
+                        <h3>Більше новин</h3>
+                        {% include news-latest.html %}
+                    </section>
+                    <aside class="col-lg-4">
+                        <div>
+                            <h3>Історія</h3>
+                            <div data-uazmi-informer="history">
+                                <script src="https://uazmi.org/informer.js?limit=5&id=history&category=історія"></script>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Археологія</h3>
+                            <div data-uazmi-informer="archaeology">
+                                <script src="https://uazmi.org/informer.js?limit=5&id=archaeology&category=археологи,археологія,розкопки"></script>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </div>
+    {% include footer.html %}
+</main>
+{% include import.html %}
+</body>
+</html>
