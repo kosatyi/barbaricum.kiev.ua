@@ -34,4 +34,6 @@
     gtag('config', '{{ site.analytics }}');
 </script>
 {% endif %}
+{% if site.adsense %}
 <script data-ad-client="{{ site.adsense }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{% endif %}
