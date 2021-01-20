@@ -21,7 +21,7 @@ paginate: 10
 paginate_path: /news/page-:num/
 
 analytics: UA-25258708-4
-adsense: ca-pub-3650650669153101
+#adsense: ca-pub-3650650669153101
 #sharethis: property=59985e446692a7001120ec59&product=inline-share-buttons
 
 title: Barbaricum
